@@ -1,7 +1,7 @@
 from .FNDA import FNDA
 
 
-def build_fnda(filename):
+def build_fnda(filename, tag):
     transition_table = open(filename, 'r')
     params = parse_args(transition_table)
     transition_table.close()
@@ -12,7 +12,7 @@ def build_fnda(filename):
     F = params[3]
     func = params[4]
 
-    return FNDA(V, Q, q0, F, func)
+    return FNDA(V, Q, q0, F, func, tag)
 
 
 def parse_args(file):

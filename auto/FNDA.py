@@ -1,7 +1,8 @@
 class FNDA:
     ERROR = 'ERROR'
 
-    def __init__(self, V, Q, q0, F, func):
+    def __init__(self, V, Q, q0, F, func, tag):
+        self.tag = tag
         self.init_V = set(V)
         self.init_Q = set(Q)
         self.init_q0 = set(q0)
