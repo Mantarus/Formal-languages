@@ -2,13 +2,21 @@ class FNDA:
     ERROR = 'ERROR'
 
     def __init__(self, V, Q, q0, F, func):
-        self.V = set(V)
-        self.Q = set(Q)
-        self.q0 = set(q0)
-        self.F = set(F)
-        self.func = func
+        self.init_V = set(V)
+        self.init_Q = set(Q)
+        self.init_q0 = set(q0)
+        self.init_F = set(F)
+        self.init_func = func
+
+    def _reset(self):
+        self.V = self.init_V
+        self.Q = self.init_Q
+        self.q0 = self.init_q0
+        self.F = self.init_F
+        self.func = self.init_func
 
     def run(self, string):
+        self._reset()
         sym_cnt = 0
         last_allowed = 0
         success = False

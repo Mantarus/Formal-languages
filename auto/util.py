@@ -1,3 +1,20 @@
+from .FNDA import FNDA
+
+
+def build_fnda(filename):
+    transition_table = open(filename, 'r')
+    params = parse_args(transition_table)
+    transition_table.close()
+
+    V = params[0]
+    Q = params[1]
+    q0 = params[2]
+    F = params[3]
+    func = params[4]
+
+    return FNDA(V, Q, q0, F, func)
+
+
 def parse_args(file):
     file.readline()
     V = get_tokens(file.readline())
