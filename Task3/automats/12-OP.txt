@@ -1,0 +1,13 @@
+# Alphabet
++ - * /
+# States
+empty + - * /
+# Init state
+empty
+# Final states
++ - * /
+# Transition table
+empty + +
+empty - -
+empty * *
+empty / /

@@ -1,0 +1,15 @@
+# Alphabet
+n i l N I L
+# States
+empty n ni nil N NI NIL
+# Init states
+empty
+# Final states
+nil NIL
+# Transition table
+empty n N
+n i ni
+ni l nil
+empty N N
+N I NI
+NI L NIL

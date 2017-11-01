@@ -1,0 +1,11 @@
+# Alphabet
+whitespace
+# States
+empty ws
+# Init states
+empty
+# Final states
+ws
+# Transition table
+empty whitespace ws
+ws whitespace ws

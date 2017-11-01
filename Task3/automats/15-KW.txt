@@ -1,0 +1,31 @@
+# Alphabet
+i f t h e n l s w u d o
+# States
+empty i if t th the then e el els else w wh whi whil while u un unt unti until d do
+# Init states
+empty
+# Final states
+if then else while until do
+# Transition table
+empty i i
+i f if
+empty t t
+t h th
+th e the
+the n then
+empty e e
+e l el
+el s els
+els e else
+empty w w
+w h wh
+wh i whi
+whi l whil
+whil e while
+empty u u
+u n un
+un t unt
+unt i unti
+unti l until
+empty d d
+d o do

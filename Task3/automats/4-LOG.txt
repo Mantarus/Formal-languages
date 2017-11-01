@@ -1,0 +1,18 @@
+# Alphabet
+t r u e f a l s
+# States
+empty t tr tru true f fa fal fals false
+# Init states
+empty
+# Final states
+true false
+# Transition table
+empty t t
+t r tr
+tr u tru
+tru e true
+empty f f
+f a fa
+fa l fal
+fal s fals
+fals e false
