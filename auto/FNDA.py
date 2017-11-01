@@ -44,6 +44,6 @@ class FNDA:
     def _transit(self, q, x):
         if x not in self.V:
             return [self.ERROR]
-        if self.func.get(q).get(x):
+        if self.func.get(q) and self.func.get(q).get(x):
             return self.func.get(q).get(x)
         return [self.ERROR]
