@@ -3,7 +3,7 @@ from auto.util import parse_args
 
 
 def main():
-    transition_table = open('automats/4-LOG.txt', 'r')
+    transition_table = open('automats/5-LS.txt', 'r')
     params = parse_args(transition_table)
     transition_table.close()
 
@@ -21,7 +21,9 @@ def main():
         result = a.run(string[i:])
         if result[0]:
             print("Found: '{}'".format(string[i : i + result[1]]))
-        i += result[1] + 1
+        else:
+            i += 1
+        i += result[1]
 
 
 if __name__ == '__main__':
