@@ -1,17 +1,17 @@
 def parse_args(file):
     file.readline()
-    V = file.readline().strip().split(' ')
+    V = get_tokens(file.readline())
     file.readline()
-    Q = file.readline().strip().split(' ')
+    Q = get_tokens(file.readline())
     file.readline()
-    q0 = file.readline().strip().split(' ')
+    q0 = get_tokens(file.readline())
     file.readline()
-    F = file.readline().strip().split(' ')
+    F = get_tokens(file.readline())
     file.readline()
     transitions = dict()
     string = file.readline().strip()
     while len(string):
-        tokens = string.split(' ')
+        tokens = replace_special(string.split(' '))
         q = tokens[0]
         x = tokens[1]
         t = tokens[2]
@@ -23,3 +23,17 @@ def parse_args(file):
         string = file.readline().strip()
 
     return (V, Q, q0, F, transitions)
+
+
+def get_tokens(line):
+    return replace_special(line.strip().split(' '))
+
+
+def replace_special(tokens):
+    result = []
+    for token in tokens:
+        if token == 'whitespace':
+            result.append(' ')
+        else:
+            result.append(token)
+    return result

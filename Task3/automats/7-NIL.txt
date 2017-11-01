@@ -7,7 +7,7 @@ empty
 # Final states
 nil NIL
 # Transition table
-empty n N
+empty n n
 n i ni
 ni l nil
 empty N N
