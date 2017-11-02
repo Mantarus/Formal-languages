@@ -1,4 +1,5 @@
 from auto.util import build_fnda
+from auto.util import replace_delimeters
 
 
 def main():
@@ -21,7 +22,9 @@ def main():
     automates.append(build_fnda('automates/17-WS.txt', 'WS'))
     automates.append(build_fnda('automates/1-ID.txt', 'ID'))
 
-    string = input("Input string: ")
+    string = ''
+    with open('input.txt', 'r') as file:
+        string = replace_delimeters(file.read())
 
     i = 0
     while i < len(string):

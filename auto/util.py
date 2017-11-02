@@ -54,3 +54,9 @@ def replace_special(tokens):
         else:
             result.append(token)
     return result
+
+
+def replace_delimeters(string):
+    return string.replace('\n', '\\n')\
+        .replace('\r', '\\r')\
+        .replace('\t', '\\t')

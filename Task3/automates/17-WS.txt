@@ -1,11 +1,16 @@
 # Alphabet
-whitespace
+whitespace \ r n t
 # States
-empty ws
+empty ws ws_s
 # Init states
 empty
 # Final states
 ws
 # Transition table
 empty whitespace ws
+empty \ ws_s
+ws_s r ws
+ws_s n ws
+ws_s t ws
 ws whitespace ws
+ws \ ws_s
