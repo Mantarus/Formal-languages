@@ -1,31 +1,46 @@
-alph_without_ast = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+-_/={}[]()'
-whitespace = ''
-asterisk = '*'
+alph_without_ast = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+-_/={}[]()<>,.;:!@#$%^&?'
+alph_without_rb = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+-_/={}[](<>,.;:!@#$%^&?*'
+alph_without_rb_ast = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+-_/={}[](<>,.;:!@#$%^&?'
+ws = 'whitespace'
 
-# Alphabet        : letters, digits, _
 print('# Alphabet')
-print(' '.join(letters + digits + underscore))
+print(' '.join(alph_without_ast + '*'), ws)
 
-# States          : empty first_sym sym
+# States          : empty lb lb_a sym sym_a a_rb
 print('# States')
-print('empty first_sym sym')
+print('empty lb lb_a sym sym_a a_rb')
 
 # Init states      : empty
 print('# Init states')
 print('empty')
 
-# Final states     : first_sym sym
+# Final states     : a_rb
 print('# Final states')
-print('first_sym sym')
+print('a_rb')
 
 # Transition table
 print('# Transition table')
 
-for x in letters + underscore:
-    print('empty {} first_sym'.format(x))
+print('empty ( lb')
 
-for x in letters + digits + underscore:
-    print('first_sym {} sym'.format(x))
+print('lb * lb_a')
 
-for x in letters + digits + underscore:
+print('lb_a * sym_a')
+
+for x in alph_without_ast:
+    print('lb_a {} sym'.format(x))
+print('lb_a {} sym'.format(ws))
+
+for x in alph_without_ast:
     print('sym {} sym'.format(x))
+print('sym {} sym'.format(ws))
+
+print('sym * sym_a')
+
+for x in alph_without_rb_ast:
+    print('sym_a {} sym'.format(x))
+print('sym_a {} sym'.format(ws))
+
+print('sym_a * sym_a')
+
+print('sym_a ) a_rb')

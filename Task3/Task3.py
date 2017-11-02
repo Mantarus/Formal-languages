@@ -12,6 +12,7 @@ def main():
     automates.append(build_fnda('automates/8-LB.txt', 'LB'))
     automates.append(build_fnda('automates/9-RB.txt', 'RB'))
     automates.append(build_fnda('automates/10-COL.txt', 'COL'))
+    automates.append(build_fnda('automates/11-COM.txt', 'COM'))
     automates.append(build_fnda('automates/12-OP.txt', 'OP'))
     automates.append(build_fnda('automates/13-LC.txt', 'LC'))
     automates.append(build_fnda('automates/14-RC.txt', 'RC'))
@@ -19,8 +20,6 @@ def main():
     automates.append(build_fnda('automates/16-AS.txt', 'AS'))
     automates.append(build_fnda('automates/17-WS.txt', 'WS'))
     automates.append(build_fnda('automates/1-ID.txt', 'ID'))
-
-    a = build_fnda('automates/15-KW.txt', 'A')
 
     string = input("Input string: ")
 
