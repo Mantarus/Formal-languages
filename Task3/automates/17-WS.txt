@@ -1,16 +1,17 @@
 # Alphabet
-whitespace \ r n t
+whitespace \n \r \t
 # States
-empty ws ws_s
+empty ws
 # Init states
 empty
 # Final states
 ws
 # Transition table
 empty whitespace ws
-empty \ ws_s
-ws_s r ws
-ws_s n ws
-ws_s t ws
+empty \n ws
+empty \r ws
+empty \t ws
 ws whitespace ws
-ws \ ws_s
+ws \n ws
+ws \r ws
+ws \t ws

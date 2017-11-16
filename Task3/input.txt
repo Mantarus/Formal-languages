@@ -1,9 +1,17 @@
-if (x = true) do {
-    fdjgjk = 124.e9
+(*x*) (* *) (*
+*)
+
+	if aaa = true then {}
+
+    if (x = true) do {   
+
+    sfdjgjk = 124.e9
+    ifthen=789e34
     if_ = 345
 
-(***DSFLKLKERL***W@&^*183**)
+(***DSFLKLKERL***W@&^*
 
-\t\r\r\r\r\t
-\n
+        s**)
+
+x = 3
 }

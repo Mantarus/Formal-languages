@@ -1,5 +1,5 @@
 # Alphabet
-a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 0 1 2 3 4 5 6 7 8 9 + - _ / = { } [ ] ( ) < > , . ; : ! @ # $ % ^ & ? * whitespace
+a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 0 1 2 3 4 5 6 7 8 9 + - _ / = { } [ ] ( ) < > , . ; : ! @ # $ % ^ & ? * whitespace \n \r \t
 # States
 empty lb lb_a sym sym_a a_rb
 # Init states
@@ -98,6 +98,9 @@ lb_a ^ sym
 lb_a & sym
 lb_a ? sym
 lb_a whitespace sym
+lb_a \n sym
+lb_a \r sym
+lb_a \t sym
 sym a sym
 sym b sym
 sym c sym
@@ -186,6 +189,9 @@ sym ^ sym
 sym & sym
 sym ? sym
 sym whitespace sym
+sym \n sym
+sym \r sym
+sym \t sym
 sym * sym_a
 sym_a a sym
 sym_a b sym
@@ -274,5 +280,8 @@ sym_a ^ sym
 sym_a & sym
 sym_a ? sym
 sym_a whitespace sym
+sym_a \n sym
+sym_a \r sym
+sym_a \t sym
 sym_a * sym_a
 sym_a ) a_rb

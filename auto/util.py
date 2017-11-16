@@ -51,6 +51,12 @@ def replace_special(tokens):
     for token in tokens:
         if token == 'whitespace':
             result.append(' ')
+        elif token == '\\n':
+            result.append('\n')
+        elif token == '\\r':
+            result.append('\r')
+        elif token == '\\t':
+            result.append('\t')
         else:
             result.append(token)
     return result
